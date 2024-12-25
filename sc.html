@@ -254,8 +254,8 @@
     <div class="calculator">
         <h1>Reward Calculator</h1>
         <label for="stakeAmount" style="font-size: 1.2em; color: #ecf0f1;">Stake Amount (TON):</label>
-        <input id="stakeAmount" type="number" min="10" max="1000" value="1000" readonly style="width: 80%; padding: 15px; font-size: 1.2em; margin-bottom: 20px; border-radius: 10px; text-align: center;">
-        <input id="slider" class="slider" type="range" min="10" max="1000" value="1000">
+        <input id="stakeAmount" type="number" min="1" max="100" value="1000" readonly style="width: 80%; padding: 15px; font-size: 1.2em; margin-bottom: 20px; border-radius: 10px; text-align: center;">
+        <input id="slider" class="slider" type="range" min="1" max="100" value="1000">
 
         <div class="output">
             <h2>Returns</h2>
@@ -289,7 +289,7 @@
     </div>
 
     <div class="customer-service">
-        <p>Need assistance? <a href="mailto:buddydollor@gmail.com">Contact Customer Support</a></p>
+        <p>Need assistance? <a href="mailto:xxx@gmail.com">Contact Customer Support</a></p>
     </div>
 
     <div class="top-buttons">
@@ -376,7 +376,7 @@
             const stakeValue = parseInt(slider.value);
             stakeAmount.value = stakeValue;
 
-            const dailyReward = stakeValue * 1.28;
+            const dailyReward = stakeValue * 0.28;
             const monthlyReward = dailyReward * 30;
             const yearlyReward = dailyReward * 365;
 
