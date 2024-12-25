@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About StakeChain</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #f39c12 40%, #333 60%); /* Softer gradient */
+            padding: 80px 20px;
+            text-align: center;
+            color: white;
+            border-bottom: 3px solid #f39c12;
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); /* Soft shadow to enhance readability */
+        }
+
+        header p {
+            font-size: 1.2rem;
+            font-weight: 400;
+            max-width: 800px;
+            margin: 0 auto;
+            font-style: italic;
+            margin-bottom: 40px;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2); /* Subtle text shadow */
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 16px 32px;
+            background-color: #f39c12;
+            color: black;
+            font-size: 1.2rem;
+            font-weight: 500;
+            text-decoration: none;
+            border-radius: 50px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            transition: 0.3s ease-in-out;
+        }
+
+        .cta-button:hover {
+            background-color: #f1c40f;
+            transform: translateY(-3px);
+        }
+
+        section {
+            padding: 70px 20px;
+            background-color: white;
+            margin-bottom: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .about-text {
+            flex: 1;
+            max-width: 50%;
+            margin-right: 40px;
+            font-size: 1.2rem;
+            color: #555;
+        }
+
+        .about-text ul {
+            list-style: none;
+            margin-top: 20px;
+            padding-left: 0;
+        }
+
+        .about-text ul li {
+            font-size: 1.1rem;
+            padding: 10px 0;
+            color: #555;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .about-text h2 {
+            font-size: 2.5rem;
+            color: #f39c12;
+            margin-bottom: 20px;
+        }
+
+        .image-wrapper {
+            flex: 1;
+            max-width: 50%;
+        }
+
+        .image-wrapper img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .two-ways-section {
+            background-color: #fff;
+            padding: 50px 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin-top: 60px;
+        }
+
+        .two-ways-section h2 {
+            font-size: 2.8rem;
+            color: #f39c12;
+            margin-bottom: 30px;
+        }
+
+        .two-ways-section p {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .two-ways-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .two-ways-section ul li {
+            font-size: 1.2rem;
+            padding: 15px;
+            background-color: #f9f9f9;
+            margin: 15px 0;
+            border-radius: 8px;
+            color: #333;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            font-size: 1rem;
+        }
+
+        footer a {
+            color: #f39c12;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .about-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .about-text {
+                max-width: 100%;
+                margin-right: 0;
+                margin-bottom: 30px;
+            }
+
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            .cta-button {
+                font-size: 1rem;
+                padding: 12px 25px;
+            }
+
+            .image-wrapper img {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Welcome to StakeChain</h1>
+        <p>Your secure gateway to earning passive income through staking on the blockchain.</p>
+        <a href="register.html" class="cta-button">Get Started Today</a>
+    </header>
+
+    <!-- About Content -->
+    <section id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>What is StakeChain?</h2>
+                    <p>StakeChain is an innovative platform that allows users to earn passive income by staking their cryptocurrency on the blockchain. We provide a simple, secure, and rewarding experience for both new investors and experienced crypto enthusiasts. With our flexible staking plans, you can earn high, consistent returns.</p>
+                </div>
+
+                <div class="image-wrapper">
+                  <!---  <img src="https://via.placeholder.com/600x400" alt="Crypto Staking" /> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose StakeChain -->
+    <section>
+        <div class="container">
+            <div class="about-text">
+                <h2>Why Choose StakeChain?</h2>
+                <ul>
+                    <li><strong>High Returns:</strong> Earn up to 10% daily with our tailored staking plans.</li>
+                    <li><strong>Flexible Plans:</strong> Choose the plan that fits your investment size.</li>
+                    <li><strong>Secure & Trustworthy:</strong> Cutting-edge technology ensures the safety of your assets.</li>
+                    <li><strong>Easy Withdrawals:</strong> Withdraw your earnings at any time, directly to your wallet.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Get Started -->
+    <section>
+        <div class="container">
+            <div class="about-text">
+                <h2>How to Get Started with StakeChain</h2>
+                <p>Getting started is easy. Simply follow these steps:</p>
+                <ul>
+                    <li>Choose your investment plan with daily returns between 4% to 10%, depending on your deposit size.</li>
+                    <li>Deposit your cryptocurrency into your StakeChain account with a minimum of 10 TON.</li>
+                    <li>Track your daily earnings and enjoy the passive income, withdraw funds anytime!</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investment Plans -->
+    <section>
+        <div class="container">
+            <h2>Investment Plans & Returns</h2>
+            <ul>
+                <li><strong>4% Daily Return:</strong> For investments between 10 TON and 899 TON.</li>
+                <li><strong>7% Daily Return:</strong> For investments between 900 TON and 2199 TON.</li>
+                <li><strong>10% Daily Return:</strong> For investments of 2200 TON or more.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Two Ways to Participate -->
+    <section class="two-ways-section">
+        <h2>Two Ways to Get Involved</h2>
+        <p>There are two simple ways to get started with StakeChain:</p>
+        <ul>
+            <li><strong>Staking Your Coins:</strong> Deposit your cryptocurrency directly into your staking account to start earning.</li>
+            <li><strong>Escrow Holding:</strong> Secure your investment in escrow until you're ready to stake or withdraw.</li>
+        </ul>
+        <a href="register.html" class="cta-button">Start Staking Now</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 StakeChain. All rights reserved. | <a href="privacy-policy.html">Privacy Policy</a> | <a href="contact-us.html">Contact Us</a></p>
+    </footer>
+
+</body>
+</html>
